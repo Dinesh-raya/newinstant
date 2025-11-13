@@ -1,0 +1,112 @@
+/* styles.css */
+
+/* Dark Theme */
+[data-theme="dark"] {
+    --primary-color: #0d1117;
+    --secondary-color: #161b22;
+    --text-color: #c9d1d9;
+    --accent-color: #58a6ff;
+    --border-color: #30363d;
+    --sidebar-color: #161b22;
+    --input-bg: #0d1117;
+    --button-bg: #238636;
+    --button-hover-bg: #2ea043;
+    --button-text-color: #ffffff;
+    --header-bg: #161b22;
+    --note-bg: #161b22;
+    --note-border: #30363d;
+}
+
+/* Light Theme */
+[data-theme="light"] {
+    --primary-color: #ffffff;
+    --secondary-color: #f6f8fa;
+    --text-color: #24292e;
+    --accent-color: #0366d6;
+    --border-color: #e1e4e8;
+    --sidebar-color: #f6f8fa;
+    --input-bg: #ffffff;
+    --button-bg: #2ea44f;
+    --button-hover-bg: #2c974b;
+    --button-text-color: #ffffff;
+    --header-bg: #f6f8fa;
+    --note-bg: #f6f8fa;
+    --note-border: #e1e4e8;
+}
+
+body {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+.stApp {
+    background-color: var(--primary-color);
+}
+
+[data-testid="stSidebar"] {
+    background-color: var(--sidebar-color);
+    border-right: 1px solid var(--border-color);
+}
+
+.stTextInput > div > div > input, .stTextArea > div > textarea {
+    background-color: var(--input-bg);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+}
+
+.stButton > button {
+    background-color: var(--button-bg);
+    color: var(--button-text-color);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-weight: 500;
+    padding: 5px 16px;
+}
+
+.stButton > button:hover {
+    background-color: var(--button-hover-bg);
+    border-color: var(--border-color);
+}
+
+[data-testid="stSidebarNavItems"] {
+    display: none;
+}
+
+/* Custom styles from dashboard.png */
+
+h1 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+/* Style for the search bar and new note button container */
+[data-testid="stHorizontalBlock"] {
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 1em;
+}
+
+/* Note container */
+.note {
+    border: 1px solid var(--note-border);
+    background-color: var(--note-bg);
+    padding: 1rem;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+}
+
+.note-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.note-content {
+    font-size: 14px;
+}
+
+.note-date {
+    font-size: 12px;
+    color: #8b949e; /* Hardcoded for dark theme, needs adjustment for light */
+}
